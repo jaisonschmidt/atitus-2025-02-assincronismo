@@ -11,3 +11,9 @@ function retornaDataHora() {
 
     return `${hora}:${minutos}:${segundos}`;
 }
+
+setInterval(function() {
+    // neste momento, temos a hora no formato HH:MM:SS
+    console.log(retornaDataHora());
+    // em vez de sexibir no console, exibir em um elemento HTML
+}, 1000);
