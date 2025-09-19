@@ -1,3 +1,5 @@
+const relogio = document.getElementById("relogio");
+
 function normalizaNumeros(numero) {
     return (numero < 10) ? "0" + numero : numero;
 }
@@ -13,7 +15,5 @@ function retornaDataHora() {
 }
 
 setInterval(function() {
-    // neste momento, temos a hora no formato HH:MM:SS
-    console.log(retornaDataHora());
-    // em vez de sexibir no console, exibir em um elemento HTML
+    relogio.innerText = retornaDataHora();
 }, 1000);
