@@ -1,3 +1,4 @@
+let interval;
 const relogio = document.getElementById("relogio");
 
 function normalizaNumeros(numero) {
@@ -14,6 +15,12 @@ function retornaDataHora() {
     return `${hora}:${minutos}:${segundos}`;
 }
 
-setInterval(function() {
-    relogio.innerText = retornaDataHora();
-}, 1000);
+function play() {
+    interval = setInterval(function() {
+        relogio.innerText = retornaDataHora();
+    }, 1000);
+}
+
+// Quando bota o mouse em cima do relógio, ele para
+// Quando tirar o mouse de cima, ele volta a funcionar
+// clearInterval
