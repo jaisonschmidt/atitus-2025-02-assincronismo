@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let cep = fetch("https://viacep.com.br/ws/99025020/json/");
+        
+        cep
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(dados){
+                console.log("Aqui eu tenho os dados do CEP");
+                console.log(dados);
+            });
+
+        console.log("Executou a linha 18");
+        console.log("Executou a linha 19");
+    </script>
+</body>
+</html>
