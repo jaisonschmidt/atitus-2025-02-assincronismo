@@ -21,6 +21,14 @@ function play() {
     }, 1000);
 }
 
-// Quando bota o mouse em cima do relógio, ele para
-// Quando tirar o mouse de cima, ele volta a funcionar
-// clearInterval
+function stop() {
+    clearInterval(interval);
+}
+
+play();
+
+// como detecto quanto boto o mouse sobre um elemento?
+relogio.addEventListener("mouseover", stop);
+
+// como detecto quando movo o mouse para fora de um elemento?
+relogio.addEventListener("mouseleave", play);
